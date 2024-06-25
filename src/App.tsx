@@ -4,9 +4,21 @@ import Home from './Layout/Routes/Home/Home';
 import About from './Layout/Routes/About/About';
 import Contact from './Layout/Routes/Contact/Contact';
 import Menu from './Layout/Routes/Menu/Menu';
-import MenuItem from './Layout/Routes/Menu/MenuItem/MenuItem';
-
+import { useEffect } from 'react';
+import { fetchMenuItems } from '../backend/Actions/actions';
+import { MenuItemType } from './Utils/types';
+import { AppDispatch, RootState } from './Store/store';
+import { useDispatch, useSelector } from 'react-redux';
+import { setMenuItems } from './Store/Slices/menuSlice';
+import ItemExpand from './Layout/Routes/Menu/Routes/ItemExpand';
+// import { addItems } from '../backend/config';
 function App() {
+  const state = useSelector((state: RootState) => state.cart);
+  useEffect(() => {
+    console.log(state);
+  }, [state]);
+
+  const dispatch: AppDispatch = useDispatch();
   const routes = createBrowserRouter([
     {
       path: '/',
@@ -27,11 +39,22 @@ function App() {
         {
           path: '/menu',
           element: <Menu />,
-          children: [{ path: '/:id', element: <MenuItem /> }],
         },
+        { path: '/menu/:name', element: <ItemExpand /> },
       ],
     },
   ]);
+
+  useEffect(() => {
+    // addItems();
+
+    async function fetch() {
+      const menuItems: MenuItemType[] = await fetchMenuItems();
+      dispatch(setMenuItems(menuItems));
+    }
+
+    fetch();
+  }, []);
   return <RouterProvider router={routes}></RouterProvider>;
 }
 

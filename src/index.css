@@ -11,5 +11,13 @@
   font-family: 'Itim', cursive;
   border: none;
   outline: none;
-  overflow: hidden;
+  text-decoration: none;
+  overflow-x: hidden;
 }
+
+body::-webkit-scrollbar {
+  z-index: -1;
+}
+/* html.active {
+  overflow-y: hidden;
+} */
