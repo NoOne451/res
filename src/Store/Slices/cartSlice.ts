@@ -36,6 +36,11 @@ const cartSlice = createSlice({
             state.totalAmount = state.cartItems.reduce((total, item) => total + parseFloat(String(item?.price).replace(/,/g, '')) * item.quantity, 0);
             state.totalItems = state.cartItems.reduce((total, item) => total + item.quantity, 0);
         },
+        deleteItem(state, action) {
+            state.cartItems = state.cartItems.filter((item) => item.id !== action.payload.id);
+            state.totalAmount = state.cartItems.reduce((total, item) => total + parseFloat(String(item?.price).replace(/,/g, '')) * item.quantity, 0);
+            state.totalItems = state.cartItems.reduce((total, item) => total + item.quantity, 0);
+        },
         clearCart(state) {
             state.cartItems = [];
             state.totalAmount = 0;
@@ -50,4 +55,4 @@ const cartSlice = createSlice({
 
 
 export default cartSlice.reducer;
-export const { addItem, removeItem, clearCart, toggleCartModal } = cartSlice.actions
+export const { addItem, removeItem, clearCart, toggleCartModal, deleteItem } = cartSlice.actions

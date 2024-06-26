@@ -17,7 +17,7 @@ const MenuItem = ({ item }: { item: MenuItemType }) => {
         <img src={item?.image_url} alt="" className=" rounded-xl" />
         <button
           onClick={(e) => addToCart(e)}
-          className="absolute p-3 rounded bg-primary bottom-[10px] left-[50%] translate-x-[-50%] z-10"
+          className="absolute p-3 rounded bg-primary bottom-[10px] left-[50%] translate-x-[-50%] z-0"
         >
           ADD TO CART
         </button>

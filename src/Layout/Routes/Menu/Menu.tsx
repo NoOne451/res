@@ -10,20 +10,24 @@ const Menu = () => {
 
   return (
     <>
-      <section className="flex flex-col gap-10 px-5 py-10 text-white bg-black sm:py-15 w-dvw min-h-dvh">
+      <section className="flex flex-col gap-5 px-5 py-10 overflow-y-auto text-white bg-black sm:py-15 w-dvw min-h-dvh">
         <h1 className="text-3xl text-center">ThooKu Biriyani Menu</h1>
         <div className="flex justify-center gap-5 uppercase">
           <button
-            className={`px-4 py-2 border-2  rounded-full border-primary  ${
-              selectedCategory === 'combo' ? 'border-solid text-primary' : ''
+            className={`px-4 py-2  rounded-full border-primary  ${
+              selectedCategory === 'combo'
+                ? 'border-2  border-solid text-primary'
+                : ''
             }`}
             onClick={() => setSelectedCategory('combo')}
           >
             Combo's
           </button>
           <button
-            className={`px-4 py-2 border-2  rounded-full border-primary  ${
-              selectedCategory === 'add-on' ? 'border-solid text-primary' : ''
+            className={`px-4 py-2  rounded-full border-primary  ${
+              selectedCategory === 'add-on'
+                ? ' border-2  border-solid text-primary'
+                : ''
             }`}
             onClick={() => setSelectedCategory('add-on')}
           >

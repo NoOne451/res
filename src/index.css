@@ -9,15 +9,32 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Itim', cursive;
-  border: none;
+  /* border: none; */
   outline: none;
   text-decoration: none;
-  overflow-x: hidden;
+  overflow: hidden;
 }
-
+html {
+  overflow-y: scroll;
+}
 body::-webkit-scrollbar {
   z-index: -1;
 }
 /* html.active {
   overflow-y: hidden;
 } */
+.cart {
+  right: -450px;
+  transition: right 0.5s;
+}
+
+.cart.active {
+  right: 0;
+}
+.overlay {
+  display: none;
+}
+
+.overlay.active {
+  display: block;
+}
