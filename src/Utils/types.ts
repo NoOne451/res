@@ -9,6 +9,7 @@ export interface MenuItemType {
     items?: string[];
     availability?: string;
     image_url?: string;
+    description?: string;
 };
 
 export interface cartItemType extends MenuItemType {

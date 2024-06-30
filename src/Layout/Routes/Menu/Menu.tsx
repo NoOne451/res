@@ -3,20 +3,22 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../Store/store';
 import MenuItem from './Components/MenuItem';
-import { Outlet } from 'react-router-dom';
+
 const Menu = () => {
   const menuItems = useSelector((state: RootState) => state.menu.menuItems);
   const [selectedCategory, setSelectedCategory] = useState('combo');
 
   return (
     <>
-      <section className="flex flex-col gap-5 px-5 py-10 overflow-y-auto text-white bg-black sm:py-15 w-dvw min-h-dvh">
-        <h1 className="text-3xl text-center">ThooKu Biriyani Menu</h1>
+      <section className="flex flex-col w-full gap-5 px-5 py-10 overflow-x-hidden overflow-y-auto text-white bg-black sm:py-15 min-h-dvh">
+        <h1 className="text-3xl font-[900] text-center underline text-customGreen underline-offset-8">
+          ThooKu Biriyani Menu
+        </h1>
         <div className="flex justify-center gap-5 uppercase">
           <button
-            className={`px-4 py-2  rounded-full border-primary  ${
+            className={`px-4 py-2  rounded-full border-customGreen  ${
               selectedCategory === 'combo'
-                ? 'border-2  border-solid text-primary'
+                ? 'border-2  border-solid text-customGreen'
                 : ''
             }`}
             onClick={() => setSelectedCategory('combo')}
@@ -24,9 +26,9 @@ const Menu = () => {
             Combo's
           </button>
           <button
-            className={`px-4 py-2  rounded-full border-primary  ${
+            className={`px-4 py-2  rounded-full border-customGreen  ${
               selectedCategory === 'add-on'
-                ? ' border-2  border-solid text-primary'
+                ? ' border-2  border-solid text-customGreen'
                 : ''
             }`}
             onClick={() => setSelectedCategory('add-on')}
@@ -49,7 +51,6 @@ const Menu = () => {
               .map((item) => <MenuItem item={item} key={item?.id} />)}
         </div>
       </section>
-      <Outlet />
     </>
   );
 };

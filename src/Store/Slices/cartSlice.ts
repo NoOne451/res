@@ -22,7 +22,7 @@ const cartSlice = createSlice({
                 state.cartItems.push({ ...action.payload, quantity: 1 });
             }
 
-            state.totalAmount = state.cartItems.reduce((total, item) => total + parseFloat(String(item?.price).replace(/,/g, '')) * item.quantity, 0);
+            state.totalAmount = state.cartItems.reduce((total, item) => total + (item?.price || 0) * item.quantity, 0);
             state.totalItems = state.cartItems.reduce((total, item) => total + item.quantity, 0);
         },
         removeItem(state, action) {
@@ -33,18 +33,24 @@ const cartSlice = createSlice({
                 state.cartItems[itemIndex].quantity -= 1;
             }
 
-            state.totalAmount = state.cartItems.reduce((total, item) => total + parseFloat(String(item?.price).replace(/,/g, '')) * item.quantity, 0);
+            state.totalAmount = state.cartItems.reduce((total, item) => total + (item?.price || 0) * item.quantity, 0);
             state.totalItems = state.cartItems.reduce((total, item) => total + item.quantity, 0);
         },
         deleteItem(state, action) {
             state.cartItems = state.cartItems.filter((item) => item.id !== action.payload.id);
-            state.totalAmount = state.cartItems.reduce((total, item) => total + parseFloat(String(item?.price).replace(/,/g, '')) * item.quantity, 0);
+            state.totalAmount = state.cartItems.reduce((total, item) => total + (item?.price || 0) * item.quantity, 0);
             state.totalItems = state.cartItems.reduce((total, item) => total + item.quantity, 0);
         },
         clearCart(state) {
             state.cartItems = [];
             state.totalAmount = 0;
             state.totalItems = 0;
+        },
+        setCart(state, action) {
+            state.cartItems = action.payload.cartItems;
+            state.totalAmount = action.payload.totalAmount;
+            state.totalItems = action.payload.totalItems;
+
         },
         toggleCartModal(state) {
             state.isCartModalOpen = !state.isCartModalOpen;
@@ -55,4 +61,4 @@ const cartSlice = createSlice({
 
 
 export default cartSlice.reducer;
-export const { addItem, removeItem, clearCart, toggleCartModal, deleteItem } = cartSlice.actions
+export const { addItem, removeItem, clearCart, toggleCartModal, deleteItem, setCart } = cartSlice.actions

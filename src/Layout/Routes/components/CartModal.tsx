@@ -1,12 +1,28 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AppDispatch, RootState } from '../../../Store/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleCartModal } from '../../../Store/Slices/cartSlice';
 import CartItem from './CartItem';
+import { formatNumberWithCommas } from '../../../Utils/utils';
+import { Link, useNavigate } from 'react-router-dom';
 
 const CartModal = () => {
+  const navigate = useNavigate();
   const cart = useSelector((state: RootState) => state.cart);
   const dispatch: AppDispatch = useDispatch();
+
+  useEffect(() => {
+    if (cart.isCartModalOpen) {
+      document.querySelector('html')?.classList.add('no-scroll');
+    } else {
+      document.querySelector('html')?.classList.remove('no-scroll');
+    }
+  }, [cart.isCartModalOpen]);
+
+  function goToCart() {
+    dispatch(toggleCartModal());
+    navigate('/cart');
+  }
   return (
     <>
       <div
@@ -15,11 +31,11 @@ const CartModal = () => {
         }`}
       ></div>
       <div
-        className={` z-[2] flex flex-col h-full bg-white w-[450px] fixed  top-0 cart  right-0 ${
+        className={` z-[4] flex flex-col h-full bg-white sm:w-[500px] w-dvw fixed  top-0 cart  right-0 ${
           cart.isCartModalOpen ? 'active' : ''
         }`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-black border-opacity-10 ">
+        <div className="flex items-center justify-between p-4 border-b border-black border-opacity-20 ">
           <h1 className="text-xl">Shopping Cart</h1>
           <button onClick={() => dispatch(toggleCartModal())}>
             <svg
@@ -36,22 +52,27 @@ const CartModal = () => {
             </svg>
           </button>
         </div>
-        <div className="flex flex-col flex-grow overflow-y-scroll ">
+        <div className="flex flex-col flex-grow overflow-y-scroll custom">
           {cart.cartItems.map((item) => {
             return <CartItem item={item} key={item.id} />;
           })}
         </div>
 
-        <div className="flex flex-col  min-h-[150px] border-black border-opacity-10 border-t">
-          <div className="flex flex-col gap-2 p-3 border-b border-black border-opacity-10">
+        <div className="flex flex-col  min-h-[150px] border-black border-opacity-20 border-t">
+          <div className="flex flex-col gap-2 p-3 border-b border-black border-opacity-20">
             <div className="flex items-center justify-between">
               <div>Subtotal</div>
-              <div>Rs. {cart?.totalAmount}</div>
+              <div>Rs. {formatNumberWithCommas(cart.totalAmount)}</div>
             </div>
-            <div>Tax included and shipping calculated at checkout</div>
+            <div className="font-light">
+              Tax included and shipping calculated at checkout
+            </div>
           </div>
           <div className="flex items-center justify-center flex-grow px-4">
-            <button className="w-full py-2 border border-black border-solid rounded-full">
+            <button
+              onClick={goToCart}
+              className="w-full py-2 text-center duration-100 border border-black border-solid rounded-full hover:text-customGreen hover:border-customGreen"
+            >
               View Cart
             </button>
           </div>

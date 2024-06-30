@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { AppDispatch, RootState } from '../../../../Store/store';
 import { addItem } from '../../../../Store/Slices/cartSlice';
 import { useState } from 'react';
+import { formatNumberWithCommas } from '../../../../Utils/utils';
 
 const ItemExpand = () => {
   const itemName = useParams().name;
@@ -42,9 +43,11 @@ const ItemExpand = () => {
     });
   }
   return (
-    <section className="flex flex-col gap-6 px-5 py-10 text-white bg-black md:px-16 md:py-15 min-h-dvh">
-      <div className="flex items-center gap-2">
-        <Link to="/">Home</Link>
+    <section className="flex flex-col gap-6 px-5 py-10 pt-[100px] text-white bg-black md:px-16 md:py-15 min-h-dvh">
+      <div className="flex items-center gap-2 ">
+        <Link to="/" className="uppercase hover:text-customGreen">
+          Home
+        </Link>
         <span>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -55,16 +58,20 @@ const ItemExpand = () => {
             <path d="M69.844 43.388L33.842 13.386a6.003 6.003 0 00-7.688 9.223L56.624 48l-30.47 25.39a6.003 6.003 0 007.688 9.223l36.002-30.001a6.01 6.01 0 000-9.223z"></path>
           </svg>
         </span>
-        <span>{itemName}</span>
+        <Link to={`/menu/${itemName}`} className="uppercase text-customGreen">
+          {itemName}
+        </Link>
       </div>
       <div className="flex flex-col gap-6 md:flex-row md:gap-12">
         <img src={item?.image_url} alt="" className="rounded-xl md:w-[50%]" />
 
         <div className="flex flex-col gap-6 md:w-[50%] md:gap-8">
-          <h1 className="text-2xl">
+          <h1 className="text-2xl font-bold">
             {item?.name} {item?.serves && ` - Serves  ${item?.serves} `}
           </h1>
-          <h1 className="text-2xl">Rs. {item?.price}</h1>
+          <h1 className="text-2xl font-light">
+            Rs. {formatNumberWithCommas(item?.price ?? 0)}
+          </h1>
 
           <div className="flex gap-8">
             <button onClick={decrementQuantity}>
@@ -100,24 +107,23 @@ const ItemExpand = () => {
           <button
             type="button"
             onClick={addToCart}
-            className="w-full py-3 rounded-full bg-primary"
+            className="w-full py-3 font-bold duration-300 rounded-full bg-customGreen hover:opacity-80"
           >
             Add to Cart
           </button>
         </div>
       </div>
 
-      <h1 className="text-2xl underline underline-offset-4">Description</h1>
-      <div>
-        Decadent pieces of tender lamb marinated in a special blend of spice and
-        cooked in fra grant basmati rice to a delicious perfection.
-      </div>
-      <div>
+      <h1 className="text-2xl font-bold underline underline-offset-4 text-customGreen">
+        Description
+      </h1>
+      <div className="font-light text-secondary">{item?.description}</div>
+      <div className="font-light text-secondary">
         {item?.items?.map((item) => (
           <div key={item}>{item}</div>
         ))}
       </div>
-      <p> Serves {item?.serves} people.</p>
+      {item?.serves && <p> Serves {item?.serves} people.</p>}
     </section>
   );
 };
