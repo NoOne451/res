@@ -333,12 +333,15 @@ const Checkout = () => {
 
               <div className="flex items-center justify-between lg:hidden">
                 <p className="font-light ">Subtotal</p>
-                <p className="font-light ">₹12,000</p>
+                <p className="font-light ">₹{cart.totalAmount}</p>
               </div>
               <div className="flex items-center justify-between lg:hidden">
                 <h1 className="text-xl">Total</h1>
                 <div className="text-sm font-light">
-                  INR <span className="text-xl font-semibold">₹ 12,000</span>
+                  INR{' '}
+                  <span className="text-xl font-semibold">
+                    ₹{cart.totalAmount}
+                  </span>
                 </div>
               </div>
 
