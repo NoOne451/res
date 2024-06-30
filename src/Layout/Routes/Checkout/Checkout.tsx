@@ -333,14 +333,16 @@ const Checkout = () => {
 
               <div className="flex items-center justify-between lg:hidden">
                 <p className="font-light ">Subtotal</p>
-                <p className="font-light ">₹{cart.totalAmount}</p>
+                <p className="font-light ">
+                  ₹{formatNumberWithCommas(cart.totalAmount)}
+                </p>
               </div>
               <div className="flex items-center justify-between lg:hidden">
                 <h1 className="text-xl">Total</h1>
                 <div className="text-sm font-light">
                   INR{' '}
                   <span className="text-xl font-semibold">
-                    ₹{cart.totalAmount}
+                    ₹{formatNumberWithCommas(cart.totalAmount)}
                   </span>
                 </div>
               </div>

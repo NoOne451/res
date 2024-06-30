@@ -165,7 +165,10 @@ html.no-scroll {
   img {
     background: white;
     border: white 1px solid;
-    scale: 1.4;
+    scale: 1.2;
+  }
+  img:hover {
+    scale: 1;
   }
 }
 
@@ -190,4 +193,12 @@ html.no-scroll {
   100% {
     transform: scale(1);
   }
+}
+.header {
+  transition-property: top;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.6s;
+}
+.scrollactive {
+  top: -100%;
 }

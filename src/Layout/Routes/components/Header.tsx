@@ -18,9 +18,23 @@ export const Header = () => {
       clearInterval(timer);
     };
   }, [cart.totalAmount]);
+
+  useEffect(() => {
+    var prevscroll = 10;
+    const header = document.querySelector('.header') as HTMLElement;
+    window.addEventListener('scroll', () => {
+      let currentscroll = window.pageYOffset;
+      if (currentscroll > prevscroll) {
+        header.classList.add('scrollactive');
+      } else {
+        header.classList.remove('scrollactive');
+      }
+      prevscroll = currentscroll;
+    });
+  }, []);
   return (
     <header
-      className={`w-[100dvw] flex items-center justify-between bg-transparent  px-8 py-6 fixed top-0 left-0 z-[3]    md:px-12 md:py-10
+      className={`w-[100dvw] header flex items-center justify-between   px-8 py-6 fixed top-0 left-0 z-[3] backdrop-blur-[2px]    md:px-12  bg-[rgba(0,0,0,0.05)] 
      `}
     >
       <Link
