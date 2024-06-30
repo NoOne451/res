@@ -10,12 +10,14 @@ type DataItem = {
   id: number;
   feedback: string;
   user: UserData[];
+  isShowOnMobile: boolean;
 };
 
 export const Testimony: React.FC = () => {
   const data: DataItem[] = [
     {
       id: 1,
+      isShowOnMobile: true,
       feedback:
         ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
       user: [
@@ -27,6 +29,8 @@ export const Testimony: React.FC = () => {
     },
     {
       id: 2,
+      isShowOnMobile: true,
+
       feedback:
         ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
       user: [
@@ -38,6 +42,8 @@ export const Testimony: React.FC = () => {
     },
     {
       id: 3,
+      isShowOnMobile: true,
+
       feedback:
         ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
       user: [
@@ -49,6 +55,8 @@ export const Testimony: React.FC = () => {
     },
     {
       id: 4,
+      isShowOnMobile: false,
+
       feedback:
         ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
       user: [
@@ -60,6 +68,8 @@ export const Testimony: React.FC = () => {
     },
     {
       id: 5,
+      isShowOnMobile: false,
+
       feedback:
         ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
       user: [

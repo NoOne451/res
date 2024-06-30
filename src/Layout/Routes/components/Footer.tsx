@@ -2,7 +2,7 @@ export const Footer = () => {
   return (
     <div
       id="contact"
-      className=" py-[40px] capitalize text-justify flex flex-col  md:flex-row md:justify-around bg-black px-5"
+      className=" py-[40px] capitalize text-justify flex flex-col  md:flex-row md:justify-around bg-black px-5 pb-[80px] sm:pb-[40px]"
     >
       <div className="md:w-[300px]">
         <p className="md:text-[25px]  text-[20px] font-[400] text-customGreen">

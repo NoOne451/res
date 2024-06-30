@@ -43,12 +43,12 @@ const MenuSection = () => {
         </div>
         <div>
           <img
-            className="object-cover hover:transform  mt-[35px] h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
+            className="object-cover hover:transform hidden sm:block mt-[35px] h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="  https://picsum.photos/600/350"
             alt="three"
           />
           <img
-            className="object-cover hover:transform  mt-[25px] h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
+            className="object-cover hover:transform hidden sm:block  mt-[25px] h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="  https://picsum.photos/600/350"
             alt="four"
           />
