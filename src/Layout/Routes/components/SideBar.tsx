@@ -30,7 +30,7 @@ const navLinks = [
 
 export function SideBar() {
   return (
-    <div className="fixed bg-black py-4 px-6 rounded-full bottom-[20px] md:py-0  flex sm:right-[40px] sm:bottom-[30px] justify-center left-[50%] translate-x-[-50%] sm:left-auto  sm:justify-start  sm:w-auto sm:flex-col gap-6 z-[3]">
+    <div className="fixed bg-black  sm:bg-transparent py-4 px-6 rounded-full bottom-[20px] md:py-0  flex sm:right-[40px] sm:bottom-[30px] justify-center left-[50%] translate-x-[-50%] sm:left-auto  sm:justify-start  sm:w-auto sm:flex-col gap-6 z-[3]">
       {navLinks.map((link, index) => {
         return (
           <NavLink
@@ -39,7 +39,7 @@ export function SideBar() {
             key={index}
           >
             <img
-              className={`w-[40px] h-[40px]  rounded-full bg-cover bg-customGreen border  border-customGreen border-solid border-spacing-[50px] p-[5px] hover:scale-125 duration-300`}
+              className={`min-w-[40px] min-h-[40px]  rounded-full bg-cover bg-customGreen border  border-customGreen border-solid border-spacing-[50px] p-[5px] hover:scale-125 duration-300`}
               src={link.icon}
               alt=""
             />
