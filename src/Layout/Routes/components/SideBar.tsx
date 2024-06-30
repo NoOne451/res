@@ -39,7 +39,7 @@ export function SideBar() {
             key={index}
           >
             <img
-              className={`min-w-[40px] min-h-[40px]  rounded-full bg-cover bg-customGreen border  border-customGreen border-solid border-spacing-[50px] p-[5px] hover:scale-125 duration-300`}
+              className={`min-w-[40px] min-h-[40px] max-w-[40px] max-h-[40px]  rounded-full bg-cover bg-customGreen border  border-customGreen border-solid border-spacing-[50px] p-[5px] hover:scale-125 duration-300`}
               src={link.icon}
               alt=""
             />
