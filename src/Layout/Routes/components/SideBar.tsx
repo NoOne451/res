@@ -1,5 +1,3 @@
-import { AppDispatch } from '@/Store/store';
-import { useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
 const navLinks = [
@@ -31,7 +29,6 @@ const navLinks = [
 ];
 
 export function SideBar() {
-  const dispatch: AppDispatch = useDispatch();
   return (
     <div className="fixed  flex sm:right-[40px] sm:bottom-[30px] justify-center left-0 sm:left-auto bottom-0 sm:justify-start w-full sm:w-auto sm:flex-col gap-8 z-[3]">
       {navLinks.map((link, index) => {

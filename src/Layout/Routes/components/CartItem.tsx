@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { cartItemType } from '../../../Utils/types';
 import { AppDispatch } from '../../../Store/store';
 import { useDispatch } from 'react-redux';

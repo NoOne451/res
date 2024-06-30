@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { AppDispatch, RootState } from '../../../Store/store';
 import { useDispatch, useSelector } from 'react-redux';
 import { toggleCartModal } from '../../../Store/Slices/cartSlice';
 import CartItem from './CartItem';
 import { formatNumberWithCommas } from '../../../Utils/utils';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const CartModal = () => {
   const navigate = useNavigate();

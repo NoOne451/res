@@ -1,8 +1,6 @@
-import { Header } from '../components/Header';
 import AboutSection from './components/AboutSection';
 import EmblaCarousel from './components/EmblaCarousel';
 import MenuSection from './components/MenuSection';
-import { SideBar } from '../components/SideBar';
 import { Testimony } from './components/Testimony/Testimony';
 
 const Home = () => {

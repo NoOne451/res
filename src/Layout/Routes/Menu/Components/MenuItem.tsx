@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { MenuItemType } from '../../../../Utils/types';
 import { useDispatch } from 'react-redux';
 import { AppDispatch } from '../../../../Store/store';
-import { addItem, toggleCartModal } from '../../../../Store/Slices/cartSlice';
+import { addItem } from '../../../../Store/Slices/cartSlice';
 import { formatNumberWithCommas } from '../../../../Utils/utils';
 
 const MenuItem = ({ item }: { item: MenuItemType }) => {

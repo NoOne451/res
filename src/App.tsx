@@ -1,7 +1,6 @@
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 import Layout from './Layout/Layout';
 import Home from './Layout/Routes/Home/Home';
-import Contact from './Layout/Routes/Contact/Contact';
 import Menu from './Layout/Routes/Menu/Menu';
 import { useEffect } from 'react';
 import { fetchMenuItems } from '../backend/Actions/actions';
@@ -26,10 +25,7 @@ function App() {
           path: '/',
           element: <Home />,
         },
-        {
-          path: '/contact',
-          element: <Contact />,
-        },
+
         {
           path: '/menu',
           element: <Menu />,
