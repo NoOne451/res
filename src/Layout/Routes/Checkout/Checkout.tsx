@@ -19,7 +19,7 @@ import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 const Checkout = () => {
   const cart = useSelector((state: RootState) => state.cart);
-  const [orderSummaryActive, setOrderSummaryActive] = useState(true);
+  const [orderSummaryActive, setOrderSummaryActive] = useState(false);
 
   const checkoutSchema = z.object({
     mobilePhoneNumber: z
@@ -99,7 +99,7 @@ const Checkout = () => {
                   </div>
                 </button>
 
-                <div>&#8377; 12,500.00</div>
+                <div>&#8377; {formatNumberWithCommas(cart.totalAmount)}</div>
               </div>
             </div>
           </div>

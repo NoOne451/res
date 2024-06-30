@@ -30,7 +30,7 @@ const navLinks = [
 
 export function SideBar() {
   return (
-    <div className="fixed  flex sm:right-[40px] sm:bottom-[30px] justify-center left-0 sm:left-auto bottom-0 sm:justify-start w-full sm:w-auto sm:flex-col gap-8 z-[3]">
+    <div className="fixed py-6 md:py-0  flex sm:right-[40px] sm:bottom-[30px] justify-center left-0 sm:left-auto bottom-0 sm:justify-start w-full sm:w-auto sm:flex-col gap-8 z-[3]">
       {navLinks.map((link, index) => {
         return (
           <NavLink

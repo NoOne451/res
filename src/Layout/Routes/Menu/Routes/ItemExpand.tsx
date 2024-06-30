@@ -45,7 +45,10 @@ const ItemExpand = () => {
   return (
     <section className="flex flex-col gap-6 px-5 py-10 pt-[100px] text-white bg-black md:px-16 md:py-15 min-h-dvh">
       <div className="flex items-center gap-2 ">
-        <Link to="/" className="uppercase hover:text-customGreen">
+        <Link
+          to="/"
+          className="uppercase hover:text-customGreen md:text-[16px] text-[14px]"
+        >
           Home
         </Link>
         <span>
@@ -58,7 +61,10 @@ const ItemExpand = () => {
             <path d="M69.844 43.388L33.842 13.386a6.003 6.003 0 00-7.688 9.223L56.624 48l-30.47 25.39a6.003 6.003 0 007.688 9.223l36.002-30.001a6.01 6.01 0 000-9.223z"></path>
           </svg>
         </span>
-        <Link to={`/menu/${itemName}`} className="uppercase text-customGreen">
+        <Link
+          to={`/menu/${itemName}`}
+          className="uppercase text-customGreen md:text-[16px] text-[14px]"
+        >
           {itemName}
         </Link>
       </div>
@@ -66,10 +72,10 @@ const ItemExpand = () => {
         <img src={item?.image_url} alt="" className="rounded-xl md:w-[50%]" />
 
         <div className="flex flex-col gap-6 md:w-[50%] md:gap-8">
-          <h1 className="text-2xl font-bold">
+          <h1 className="text-xl font-bold md:text-2xl">
             {item?.name} {item?.serves && ` - Serves  ${item?.serves} `}
           </h1>
-          <h1 className="text-2xl font-light">
+          <h1 className="text-xl font-light md:text-2xl">
             Rs. {formatNumberWithCommas(item?.price ?? 0)}
           </h1>
 
@@ -114,7 +120,7 @@ const ItemExpand = () => {
         </div>
       </div>
 
-      <h1 className="text-2xl font-bold underline underline-offset-4 text-customGreen">
+      <h1 className="text-xl font-bold underline md:text-2xl underline-offset-4 text-customGreen">
         Description
       </h1>
       <div className="font-light text-secondary">{item?.description}</div>

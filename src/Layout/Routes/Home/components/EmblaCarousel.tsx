@@ -47,10 +47,14 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
                 alt="Your alt text"
               />
 
-              <div className="capitalize embla__slide__text ">
-                <p className="text-[60px] text-brown font-bold">Welcome</p>
-                <span className="text-[35px] font-semibold ">{slide.text}</span>
-                <span className="text-[20px] font-bold text-justify">
+              <div className="gap-2 capitalize embla__slide__text">
+                <p className="md:text-[60px] text-[40px] text-brown font-bold">
+                  Welcome
+                </p>
+                <span className="md:text-[35px]  text-[25px] font-semibold ">
+                  {slide.text}
+                </span>
+                <span className="md:text-[20px] text-[15px] font-bold text-justify">
                   {slide.desc}
                 </span>
               </div>

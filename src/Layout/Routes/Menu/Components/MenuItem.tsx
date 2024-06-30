@@ -24,10 +24,10 @@ const MenuItem = ({ item }: { item: MenuItemType }) => {
           ADD TO CART
         </button>
       </Link>
-      <p className="">
+      <p className="md:text-[16px] text-[14px]">
         {item?.name} {item?.serves && ` - Serves  ${item?.serves} `}
       </p>
-      <p className="text-white ">
+      <p className="text-white md:text-[16px] text-[14px]">
         Rs. {formatNumberWithCommas(item?.price ?? 0)}
       </p>
     </div>

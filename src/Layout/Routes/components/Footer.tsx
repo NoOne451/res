@@ -5,11 +5,11 @@ export const Footer = () => {
       className=" py-[40px] capitalize text-justify flex flex-col  md:flex-row md:justify-around bg-black px-5"
     >
       <div className="md:w-[300px]">
-        <p className="text-[25px] font-[400] text-customGreen">
+        <p className="md:text-[25px]  text-[20px] font-[400] text-customGreen">
           Sign up with OTP
         </p>
         <div className="">
-          <p className="pt-[30px] pb-[15px] text-bg">
+          <p className="pt-[30px] pb-[15px] text-bg md:text-[16px] text-[14px]">
             "Discover the flavors of our authentic, mouthwatering biryani by
             signing up today!"
           </p>
@@ -19,10 +19,10 @@ export const Footer = () => {
         </div>
       </div>
       <div>
-        <p className="pt-[25px] md:pt-0 text-[25px] font-[400] text-customGreen">
+        <p className="pt-[25px] md:pt-0 md:text-[25px]  text-[20px] font-[400] text-customGreen">
           support links
         </p>
-        <div className="py-[25px] flex flex-col [&>a]:text-bg ">
+        <div className="py-[25px] flex flex-col [&>a]:text-bg md:text-[16px] text-[14px] ">
           <a href="" className="py-[5px] hover:text-customGreen">
             privacy policy
           </a>

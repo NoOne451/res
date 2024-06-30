@@ -10,13 +10,13 @@ const Menu = () => {
 
   return (
     <>
-      <section className="flex flex-col w-full gap-5 px-5 py-10 overflow-x-hidden overflow-y-auto text-white bg-black sm:py-15 min-h-dvh">
-        <h1 className="text-3xl font-[900] text-center underline text-customGreen underline-offset-8">
+      <section className="flex flex-col w-full gap-5 px-5 py-10 pt-20 overflow-x-hidden overflow-y-auto text-white bg-black sm:pt-10 sm:py-15 min-h-dvh">
+        <h1 className="md:text-3xl text-2xl font-[900] text-center underline text-customGreen underline-offset-8">
           ThooKu Biriyani Menu
         </h1>
         <div className="flex justify-center gap-5 uppercase">
           <button
-            className={`px-4 py-2  rounded-full border-customGreen  ${
+            className={`px-4 py-2  rounded-full border-customGreen md:text-[16px] text-[14px]  ${
               selectedCategory === 'combo'
                 ? 'border-2  border-solid text-customGreen'
                 : ''
@@ -26,7 +26,7 @@ const Menu = () => {
             Combo's
           </button>
           <button
-            className={`px-4 py-2  rounded-full border-customGreen  ${
+            className={`px-4 py-2  rounded-full border-customGreen md:text-[16px] text-[14px]  ${
               selectedCategory === 'add-on'
                 ? ' border-2  border-solid text-customGreen'
                 : ''

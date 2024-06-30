@@ -11,11 +11,15 @@ const MenuSection = () => {
     >
       <div className="p-[15px] md:p-[50px] md:w-[50%]">
         <div className="flex flex-col text-right">
-          <span className="text-3xl text-white ">{content.title}</span>
-          <span className="text-5xl text-customGreen">{content.subtitle}</span>
+          <span className="text-2xl text-white md:text-3xl ">
+            {content.title}
+          </span>
+          <span className="text-4xl md:text-5xl text-customGreen">
+            {content.subtitle}
+          </span>
         </div>
 
-        <div className="text-[18px] text-justify pt-5 pb-3 text-gray">
+        <div className="md:text-[18px] text-[14px] text-justify pt-5 pb-3 text-gray">
           {content.desc}
         </div>
         <div className="text-right">
@@ -27,24 +31,24 @@ const MenuSection = () => {
       <div className="width-[50%] md:flex gap-3 p-[15px]">
         <div>
           <img
-            className=" object-cover  h-[300px] w-[355px] md:h-[200px] md:w-[255px]"
+            className=" object-cover  h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="  https://picsum.photos/600/350"
             alt="three"
           />
           <img
-            className="object-cover hover:transform  mt-[25px] h-[300px] w-[355px] md:h-[200px] md:w-[255px]"
+            className="object-cover hover:transform  mt-[25px] h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="  https://picsum.photos/600/350"
             alt="four"
           />
         </div>
         <div>
           <img
-            className="object-cover hover:transform  mt-[35px] h-[300px] w-[355px] md:h-[200px] md:w-[255px]"
+            className="object-cover hover:transform  mt-[35px] h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="  https://picsum.photos/600/350"
             alt="three"
           />
           <img
-            className="object-cover hover:transform  mt-[25px] h-[300px] w-[355px] md:h-[200px] md:w-[255px]"
+            className="object-cover hover:transform  mt-[25px] h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="  https://picsum.photos/600/350"
             alt="four"
           />

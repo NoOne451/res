@@ -31,7 +31,7 @@ const CartModal = () => {
         }`}
       ></div>
       <div
-        className={` z-[4] flex flex-col h-full bg-white sm:w-[500px] w-dvw fixed  top-0 cart  right-0 ${
+        className={` z-[4] flex flex-col h-full bg-white md:w-[500px] w-dvw fixed  top-0 cart  right-0 ${
           cart.isCartModalOpen ? 'active' : ''
         }`}
       >

@@ -83,13 +83,13 @@ export const Testimony: React.FC = () => {
       className="flex flex-col justify-around "
     >
       <div className="text-center p-[40px]">
-        <p className="text-[35px] text-customGreen font-bold leading-none">
+        <p className="md:text-[35px] text-[30px] text-customGreen font-bold leading-none">
           Testimony
         </p>
-        <p className="text-[45px] leading-none text-white">
+        <p className="md:text-[35px] text-[30px] leading-none text-white">
           what our customer says
         </p>
-        <p className="p-[20px] text-[20px] font-semibold text-white">
+        <p className="p-[20px] md:text-[20px] text-[15px] font-semibold text-white">
           Far far away, behind the word mountains, far from the countries
           Vokalia and Consonantia, there live the blind texts.
         </p>

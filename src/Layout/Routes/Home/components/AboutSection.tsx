@@ -31,18 +31,18 @@ const AboutSection = ({ about }: { about: PropType[] }) => {
       </div>
       <div className=" p-[20px] md:w-[50%] backdrop-blur ">
         <div className=" md:p-[50px] ">
-          <span className="text-[40px] text-white font-bold">
+          <span className="md:text-[40px] text-[30px] text-white font-bold">
             {about[0].title}
           </span>
-          <div className="text-[40px] text-customGreen font-[500] leading-[50px] ">
+          <div className="md:text-[40px] text-[30px] text-customGreen font-[500] leading-[50px] ">
             {about[0].subtitle}
           </div>
-          <div className="text-[18px]  text-justify text-gray">
+          <div className="md:text-[18px] text-[14px]  text-justify text-gray">
             {about[0].desc}
           </div>
-          <button className="mt-[10px] transition-all text-black border-[1px] border-customGreen font-bold bg-customGreen hover:bg-transparent hover:text-customGreen px-[60px] py-[8px] rounded-sm">
+          {/* <button className="mt-[10px] transition-all text-black border-[1px] border-customGreen font-bold bg-customGreen hover:bg-transparent hover:text-customGreen px-[60px] py-[8px] rounded-sm">
             Learn More
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

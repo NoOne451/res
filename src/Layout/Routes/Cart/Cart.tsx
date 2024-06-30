@@ -27,7 +27,7 @@ const Cart = () => {
     <>
       <div className="text-white bg-black h-dvh">
         <div className="h-[20dvh] bg-cover bg-center flex justify-center items-center  bg-[url('https://sahibsbiryani.com/cdn/shop/files/about_bg_01.jpg?v=1712745115&width=1500')]">
-          <h1 className="text-3xl font-extrabold sm:text-5xl ">
+          <h1 className="mt-16 text-2xl font-extrabold sm:mt-0 sm:text-5xl ">
             Shopping Cart
           </h1>
         </div>
