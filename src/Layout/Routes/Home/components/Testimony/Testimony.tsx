@@ -83,12 +83,12 @@ export const Testimony: React.FC = () => {
   return (
     <section
       // style={{
-      //   backgroundImage: "url(testimonialBG.jpg)",
-      //   height: "100%",
-      //   width: "100%",
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   backgroundPosition: "center",
+      //   backgroundImage: 'url(testimonialBG.jpg)',
+      //   height: '100%',
+      //   width: '100%',
+      //   backgroundSize: 'cover',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundPosition: 'center',
       // }}
       className="flex flex-col justify-around bg-black"
     >
