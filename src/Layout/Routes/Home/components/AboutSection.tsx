@@ -11,7 +11,7 @@ const AboutSection = ({ about }: { about: PropType[] }) => {
       className="px-[10px] py-[20px] flex flex-col md:flex-row bg-black "
     >
       <div className="relative flex items-center justify-center py-[30px] md:w-[50%] [&>img]:rounded-md">
-        <img
+        {/* <img
           className="absolute h-[100px] w-[150px] md:w-[250px] md:h-[250px] object-cover"
           style={{ top: 'calc(8px)', left: 'calc(0px)' }}
           src="about.jpg"
@@ -27,7 +27,7 @@ const AboutSection = ({ about }: { about: PropType[] }) => {
           style={{ bottom: 'calc(-5px)', right: 'calc(0px )' }}
           src="about.jpg"
           alt=""
-        />
+        /> */}
       </div>
       <div className=" p-[20px] md:w-[50%] backdrop-blur ">
         <div className=" md:p-[50px] ">

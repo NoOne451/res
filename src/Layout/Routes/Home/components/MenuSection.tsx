@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const MenuSection = () => {
   const content = {
-    title: "Discover",
-    subtitle: "Our Menu",
+    title: 'Discover',
+    subtitle: 'Our Menu',
     desc: "Dive into a world of flavors with our exquisite Thooku Biryani combos! Whether you're craving succulent chicken, delectable prawns, or irresistible add-ons, our carefully curated menu has something to tantalize every taste bud. Perfect for family feasts or intimate meals, each dish is crafted with love and tradition. Discover your favorite today!",
   };
   return (
@@ -26,7 +26,7 @@ const MenuSection = () => {
         </div>
         <div className="text-right">
           <Link to="/menu">
-            {" "}
+            {' '}
             <button className="px-4 py-3 bg-transparent border border-solid text-customGreen border-customGreen hover:bg-customGreen hover:text-black hover:transition ">
               View Full Menu
             </button>
@@ -35,7 +35,7 @@ const MenuSection = () => {
       </div>
       <div className="width-[50%] md:flex gap-3 p-[15px]">
         <div>
-          <img
+          {/* <img
             className=" object-cover  h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="chicken_combo.jpg"
             alt="three"
@@ -56,7 +56,7 @@ const MenuSection = () => {
             className="object-cover hover:transform hidden sm:block  mt-[25px] h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="testimonialBG.jpg"
             alt="four"
-          />
+          /> */}
         </div>
       </div>
     </div>
