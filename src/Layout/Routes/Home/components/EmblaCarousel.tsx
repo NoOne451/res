@@ -41,11 +41,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         <div className="embla__container">
           {slides.map((slide) => (
             <div className="embla__slide" key={slide.imageUrl}>
-              {/* <img
+              <img
                 className="embla__slide__img"
                 src={slide.imageUrl}
                 alt="Your alt text"
-              /> */}
+              />
 
               <div className="gap-2 capitalize embla__slide__text">
                 <p className="md:text-[60px] text-[40px] text-brown font-bold">

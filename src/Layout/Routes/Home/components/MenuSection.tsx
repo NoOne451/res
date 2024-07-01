@@ -35,7 +35,7 @@ const MenuSection = () => {
       </div>
       <div className="width-[50%] md:flex gap-3 p-[15px]">
         <div>
-          {/* <img
+          <img
             className=" object-cover  h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="chicken_combo.jpg"
             alt="three"
@@ -56,7 +56,7 @@ const MenuSection = () => {
             className="object-cover hover:transform hidden sm:block  mt-[25px] h-[300px] w-[355px] md:h-[200px] md:w-[255px] rounded-lg"
             src="testimonialBG.jpg"
             alt="four"
-          /> */}
+          />
         </div>
       </div>
     </div>

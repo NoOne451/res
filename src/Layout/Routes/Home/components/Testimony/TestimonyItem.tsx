@@ -22,7 +22,7 @@ export const TestimonyItem: React.FC<TestimonyItemProps> = ({ data }) => (
       {data.feedback}
     </div>
     <div className="flex gap-[15px] ">
-      {/* <img src="about.jpg" className="h-[32px] w-[32px] rounded-full" alt="" /> */}
+      <img src="about.jpg" className="h-[32px] w-[32px] rounded-full" alt="" />
       <div className="">
         <p className="md:text-[16px] text-[14px]">{data.user[0].username}</p>
         <p className=" text-black md:text-[12px] text-[10px]">
