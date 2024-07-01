@@ -1,5 +1,5 @@
-import React from 'react';
-import { TestimonyItem } from './TestimonyItem';
+import React from "react";
+import { TestimonyItem } from "./TestimonyItem";
 
 type UserData = {
   username: string;
@@ -19,11 +19,11 @@ export const Testimony: React.FC = () => {
       id: 1,
       isShowOnMobile: true,
       feedback:
-        ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
+        " “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”",
       user: [
         {
-          username: 'vimal',
-          date: 'bought month ago',
+          username: "vimal",
+          date: "bought month ago",
         },
       ],
     },
@@ -32,11 +32,11 @@ export const Testimony: React.FC = () => {
       isShowOnMobile: true,
 
       feedback:
-        ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
+        " “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”",
       user: [
         {
-          username: 'vimal',
-          date: 'bought month ago',
+          username: "vimal",
+          date: "bought month ago",
         },
       ],
     },
@@ -45,11 +45,11 @@ export const Testimony: React.FC = () => {
       isShowOnMobile: true,
 
       feedback:
-        ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
+        " “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”",
       user: [
         {
-          username: 'vimal',
-          date: 'bought month ago',
+          username: "vimal",
+          date: "bought month ago",
         },
       ],
     },
@@ -58,11 +58,11 @@ export const Testimony: React.FC = () => {
       isShowOnMobile: false,
 
       feedback:
-        ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
+        " “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”",
       user: [
         {
-          username: 'vimal',
-          date: 'bought month ago',
+          username: "vimal",
+          date: "bought month ago",
         },
       ],
     },
@@ -71,11 +71,11 @@ export const Testimony: React.FC = () => {
       isShowOnMobile: false,
 
       feedback:
-        ' “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”',
+        " “Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small.”",
       user: [
         {
-          username: 'vimal',
-          date: 'bought month ago',
+          username: "vimal",
+          date: "bought month ago",
         },
       ],
     },
@@ -83,12 +83,12 @@ export const Testimony: React.FC = () => {
   return (
     <section
       style={{
-        backgroundImage: 'url(testimonyBG.jpg)',
-        height: '100%',
-        width: '100%',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
+        backgroundImage: "url(testimonialBG.jpg)",
+        height: "100%",
+        width: "100%",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
       }}
       className="flex flex-col justify-around "
     >
